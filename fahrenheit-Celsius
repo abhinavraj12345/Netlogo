@@ -1,4 +1,4 @@
-globals [c f]
+globals [ f ]
 to fahrenheit-Celsius
   clear-all
   reset-ticks
