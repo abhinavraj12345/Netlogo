@@ -1,0 +1,17 @@
+globals [a b c]
+to GCD
+  set a read-from-string user-input "a"
+  set b read-from-string user-input "b"
+  if a < b
+  [
+    set c a + b
+    set a c - a
+    set b c - a
+  ]
+  while [ b != 0 ]
+  [
+    set a b
+    set b a mod b
+  ]
+  output-show a
+end
