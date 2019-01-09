@@ -1,0 +1,8 @@
+globals[X Y]
+to product
+  clear-all
+  reset-ticks
+  set X user-input "X"
+  set Y user-input "Y"
+  output-show read-from-string X * read-from-string Y
+end
