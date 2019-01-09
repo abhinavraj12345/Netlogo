@@ -1,0 +1,16 @@
+globals[Y a]
+to-report Factor [x]
+  let fact 1
+  while[x > 0]
+  [
+    set fact fact * x
+    set x x - 1
+  ]
+  report fact
+end
+
+to factorial
+  ;set Y user-input "X"
+  ;set a read-from-string Y
+  output-show Factor read-from-string user-input "X"
+end
