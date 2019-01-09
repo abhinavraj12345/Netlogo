@@ -1,0 +1,10 @@
+globals [a b c s]
+to area
+  clear-all
+  reset-ticks
+  set a read-from-string user-input "a"
+  set b read-from-string user-input "b"
+  set c read-from-string user-input "c"
+  set s ( a + b + c ) / 2
+  output-show sqrt( s * (s - a) * (s - b) * (s - c) )
+end
