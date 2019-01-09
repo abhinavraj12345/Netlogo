@@ -1,0 +1,7 @@
+globals [c f]
+to Celsius-fahrenheit
+  clear-all
+  reset-ticks
+  set c read-from-string user-input "Celsius"
+  output-show (( 9 / 5) * c ) + 32
+end
