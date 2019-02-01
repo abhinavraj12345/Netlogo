@@ -1,0 +1,13 @@
+globals [n]
+
+to tutles 
+  clear-all
+  set n 3
+  create-turtles n [pen-down]
+end
+to go
+  ask turtles [
+    fd 1
+    rt random 360
+  ]
+end
