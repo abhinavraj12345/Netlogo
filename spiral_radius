@@ -1,0 +1,17 @@
+globals [n k]
+
+to setup
+  clear-all
+  set n 1
+  create-turtles n [pen-down]
+  set k 0.25
+end
+
+to go
+  
+  ask turtles [
+    fd k
+    rt  8
+    set k k + 0.005
+  ]
+end
