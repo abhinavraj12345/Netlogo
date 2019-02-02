@@ -1,0 +1,16 @@
+globals [x]
+to setup
+  clear-all
+  create-turtles 2 [ set heading 90 ]
+  create-turtles 1 [ set heading 0 ]
+  ask turtle 2 [ pd rt 270 fd 10 ]
+  ask turtle 0 [ pd fd 10 ]
+  ask turtle 1 [ pd fd 5 ]
+  ask turtle 0 [rt 90]
+  ask turtle 1 [rt 90] 
+end
+
+to go 
+  ask turtle 0 [ pd rt 1 fd 2 * 5 * tan 1]
+  ask turtle 1 [ pd rt 1 fd 5 * tan 1]
+end
