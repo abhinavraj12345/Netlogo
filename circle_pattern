@@ -1,0 +1,12 @@
+
+to tutles 
+  set-default-shape turtles "circle"
+  clear-all
+  cro 50 [ fd 1 ]
+end
+to go
+  ask turtles [pd
+    fd 1
+    rt 10
+  ]
+end
