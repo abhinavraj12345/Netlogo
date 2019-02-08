@@ -1,0 +1,20 @@
+globals [n vx vy g]
+
+to tutles 
+  clear-all
+  set n 1
+  set vx 10 
+  set vy 50
+  set g 10 
+  set-default-shape turtles "turtle"
+  create-turtles n [pen-down set heading 90]
+  ask turtles [lt atan vy vx]
+end
+
+to go
+  ask turtles [
+    fd ( sqrt ( (vx * vx) + (vy * vy) ) / 50)
+    rt atan vx  vy
+    set vy vy - g 
+  ]
+end
