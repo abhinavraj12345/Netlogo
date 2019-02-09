@@ -1,0 +1,18 @@
+;create 2 buttons setup & go
+
+globals [step]
+to setup
+  clear-all
+  create-turtles 1 [set heading 0 bk 15]
+  set step 5
+  ask turtles [pd fd step]
+  
+
+end
+to go
+  ask turtles [pd hatch 1 [ lt 15 fd step ] hatch 1 [ rt 15 fd step ] die ]
+  set step step * 0.9
+end 
+to hide
+  ask turtles [ht]
+end
