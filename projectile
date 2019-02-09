@@ -1,3 +1,6 @@
+;create 2 buttons setup & go
+;create 3 sliders initalx, initialy & g
+
 turtles-own [ vx vy ylev]
 to setup 
   clear-all
