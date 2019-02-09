@@ -14,7 +14,7 @@ end
 to go
   ask turtles [
     fd ( sqrt ( (vx * vx) + (vy * vy) ) / 50)
-    rt atan vx  vy
+    set heading atan vx  vy
     set vy vy - g 
   ]
 end
