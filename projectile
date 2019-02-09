@@ -1,0 +1,21 @@
+turtles-own [ vx vy ylev]
+to setup 
+  clear-all
+  set-default-shape turtles "airplane"
+  create-turtles 1 [
+    set heading 90
+    set vx initialx
+    set vy initialy
+    set ylev 0
+  ]
+  ask turtle 0 [bk 15 rt 90 fd 15 set heading 0]
+end
+
+to go
+  ask turtles [pd
+    set heading atan vx  vy
+    fd ( sqrt ( (vx * vx) + (vy * vy) ) / 20)
+    set vy vy - g  
+    ;if vy - [stop] 
+  ]
+end
