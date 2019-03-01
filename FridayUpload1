@@ -1,0 +1,22 @@
+globals [step sizee]
+to setup
+  clear-all
+  ask patches [ifelse pycor > -8 [set pcolor sky][set pcolor green]]
+  ask patches [ if ((pxcor + 5 ) * (pxcor + 5 ) + (pycor - 5 ) * (pycor - 5)) < 15 
+    [set pcolor orange] ]
+  create-turtles 1 [set heading 0 bk 15]
+  set step 5
+  set sizee 10
+  ask turtle 0 [set pen-size sizee pd fd step]
+  
+
+end
+to go
+  ask turtles [ifelse step > 3.5
+    [ht set pen-size sizee pd hatch 1 [ lt random 45 fd step ] 
+      hatch 1 [ rt random 45 fd step ] die]
+    [ht stop]
+  ]
+  set step step * 0.9
+  set sizee sizee * 0.8
+end 
